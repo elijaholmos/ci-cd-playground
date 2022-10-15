@@ -17,3 +17,4 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   GITLEAKS_NOTIFY_USER_LIST: '@elijaholmos'
+                  GITLEAKS_CONFIG: .github/config/.gitleaks.toml
