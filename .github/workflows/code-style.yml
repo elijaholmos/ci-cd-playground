@@ -5,8 +5,8 @@ on:
     paths: ['**.js', '**.ts']
 
 jobs:
-  lint:
-    name: Lint
+  rome-ci:
+    name: Lint & Format
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -15,22 +15,10 @@ jobs:
       - name: Install Rome
         uses: rome/setup-rome@v0.4
         with:
-          version: latest
+          version: 10.0.1
 
-      - name: Lint Code
-        run: rome check .
+      - name: Check Rome Version
+        run: rome version
 
-  format:
-    name: Format
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Install Rome
-        uses: rome/setup-rome@v0.4
-        with:
-          version: latest
-
-      - name: Format Code
-        run: rome format .
+      - name: Run Linter & Formatter
+        run: rome ci .
