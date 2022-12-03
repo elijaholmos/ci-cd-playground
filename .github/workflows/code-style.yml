@@ -19,3 +19,18 @@ jobs:
 
       - name: Lint Code
         run: rome check .
+
+  format:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Rome
+        uses: rome/setup-rome@v0.4
+        with:
+          version: latest
+
+      - name: Format Code
+        run: rome format .
