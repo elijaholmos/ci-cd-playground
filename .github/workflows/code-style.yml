@@ -5,20 +5,39 @@ on:
     paths: ['**.js', '**.ts']
 
 jobs:
-  rome-ci:
-    name: Lint & Format
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Install Rome
-        uses: elijaholmos/setup-rome@fix-version-input
+        uses: rome/setup-rome@main
         with:
           version: 10.0.1
 
       - name: Check Rome Version
         run: rome version
 
-      - name: Run Linter & Formatter
-        run: rome ci .
+      - name: Run Linter
+        # specific flag is required per https://github.com/rome/tools/discussions/3925#discussioncomment-4310702
+        run: rome ci --formatter-disabled=true .
+  format:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install Rome
+        uses: rome/setup-rome@main
+        with:
+          version: 10.0.1
+
+      - name: Check Rome Version
+        run: rome version
+
+      - name: Run Formatter
+        # specific flag is required per https://github.com/rome/tools/discussions/3925#discussioncomment-4310702
+        run: rome ci --linter-disabled=true .
