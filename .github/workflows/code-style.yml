@@ -3,7 +3,10 @@ on:
   pull_request:
     branches: [main]
     paths: ['**.js', '**.ts']
-
+env:
+  # version should be in sync w package.json
+  ROME_VERSION: 11.0.0
+  
 jobs:
   lint:
     name: Lint
@@ -15,7 +18,7 @@ jobs:
       - name: Install Rome
         uses: rome/setup-rome@main
         with:
-          version: 10.0.1
+          version: ${{ env.ROME_VERSION }}
 
       - name: Check Rome Version
         run: rome version
@@ -33,7 +36,7 @@ jobs:
       - name: Install Rome
         uses: rome/setup-rome@main
         with:
-          version: 10.0.1
+          version: ${{ env.ROME_VERSION }}
 
       - name: Check Rome Version
         run: rome version
