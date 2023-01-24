@@ -1,0 +1,16 @@
+name: Prisma Validate
+on:
+  pull_request:
+    branches: [main]
+    # paths: ['**.js', '**.ts']
+
+jobs:
+  lint:
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run validator
+        uses: elijaholmos/prisma-schema-validate@main
