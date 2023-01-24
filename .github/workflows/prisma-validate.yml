@@ -11,6 +11,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        
+      - name: Create .env file
+        run: cat "DATABASE_URL=postgresql://postgres:password@localhost:5432" > .env
 
       - name: Run validator
         uses: elijaholmos/prisma-schema-validate@dev
