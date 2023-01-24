@@ -13,7 +13,7 @@ model Student {
     first              String
     last               String
     walletAddress      String             @unique
-    courseIds          String[]           @db..ObjectId
+    courseIds          String[]           @db.ObjectId
     courses            Course[]           @relation(fields: [courseIds], references: [id], name: "students")
     honorsCourseIds    String[]           @db.ObjectId
     honorsCourses      Course[]           @relation(fields: [honorsCourseIds], references: [id], name: "honorsStudents")
