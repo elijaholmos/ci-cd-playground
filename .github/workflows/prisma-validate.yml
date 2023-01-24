@@ -17,5 +17,3 @@ jobs:
 
       - name: Run validator
         uses: elijaholmos/prisma-schema-validate@dev
-        with:
-          version: 5.0
