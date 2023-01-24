@@ -18,4 +18,4 @@ jobs:
       - name: Run validator
         uses: elijaholmos/prisma-schema-validate@dev
         with:
-          schema: prisma/schema.prisma
+          version: 5.0
