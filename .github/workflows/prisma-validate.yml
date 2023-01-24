@@ -2,7 +2,7 @@ name: Prisma Validate
 on:
   pull_request:
     branches: [main]
-    # paths: ['**.js', '**.ts']
+    paths: ['**/schema.prisma']
 
 jobs:
   lint:
