@@ -6,7 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "dependencies": {
-    "@prisma/client": "4.10.0"
+    "@prisma/client": "4.10.1"
   },
   "devDependencies": {
     "prisma": "4.10.0"
