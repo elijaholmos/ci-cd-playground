@@ -2,6 +2,7 @@ on:
     push:
         branches:
             - main
+    workflow_dispatch:
 
 permissions:
     contents: write
@@ -15,4 +16,6 @@ jobs:
         steps:
             - uses: google-github-actions/release-please-action@v3
               with:
-                  command: manifest
+                  command: manifest \
+                      --config-file .github\workflows\config\release-please-config.json \
+                      --manifest-file .github\workflows\config\.release-please-manifest.json
