@@ -16,6 +16,4 @@ jobs:
         steps:
             - uses: google-github-actions/release-please-action@v3
               with:
-                  command: manifest \
-                      --config-file .github\workflows\config\release-please-config.json \
-                      --manifest-file .github\workflows\config\.release-please-manifest.json
+                  command: manifest --config-file .github\workflows\config\release-please-config.json --manifest-file .github\workflows\config\.release-please-manifest.json
