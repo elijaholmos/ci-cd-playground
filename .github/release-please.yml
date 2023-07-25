@@ -1,0 +1,6 @@
+# https://github.com/googleapis/repo-automation-bots/tree/main/packages/release-please
+
+handleGHRelease: true
+manifest: true
+manifestConfig: .github/workflows/config/release-please-config.json
+manifestFile: .github/workflows/config/.release-please-manifest.json
