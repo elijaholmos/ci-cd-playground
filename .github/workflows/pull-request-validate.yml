@@ -9,4 +9,4 @@ permissions:
 
 jobs:
   inherit-parent-action:
-    uses: elijaholmos/.github/workflows/pull-request-title.yml@main
+    uses: elijaholmos/elijaholmos/.github/workflows/pull-request-title.yml@main
