@@ -5,12 +5,12 @@
   "author": "",
   "private": true,
   "license": "UNLICENSED",
-  "packageManager": "pnpm@8.6.11",
+  "packageManager": "pnpm@8.6.12",
   "dependencies": {
-    "@prisma/client": "5.0.0"
+    "@prisma/client": "5.1.1"
   },
   "devDependencies": {
-    "@types/node": "20.4.5",
-    "prisma": "5.0.0"
+    "@types/node": "20.5.0",
+    "prisma": "5.1.1"
   }
 }
