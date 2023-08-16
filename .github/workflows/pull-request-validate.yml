@@ -8,5 +8,5 @@ permissions:
   pull-requests: write
 
 jobs:
-  inherit-parent-action:
-    uses: 'elijaholmos/.github/workflows/pull-request-title.yml@main'
+  parent:
+    uses: 'elijaholmos/.github/.github/workflows/pull-request-title.yml@main'
