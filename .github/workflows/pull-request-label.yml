@@ -25,4 +25,4 @@ jobs:
           files_to_ignore: |
             "pnpm-lock.yaml"
             ".terraform.lock.hcl"
-            "**/*/package-lock.json"
+            "*/package-lock.json"
