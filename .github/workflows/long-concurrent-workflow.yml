@@ -1,0 +1,13 @@
+name: Long Concurrent Workflow
+
+on:
+    push:
+
+jobs:
+    long-job:
+        concurrency:
+            group: test-group
+        runs-on: ubuntu-latest
+        steps:
+            - name: Wait 3 minutes
+              run: sleep 180
