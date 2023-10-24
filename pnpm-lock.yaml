@@ -7,19 +7,19 @@ settings:
 dependencies:
   '@prisma/client':
     specifier: 5.5.0
-    version: 5.5.0(prisma@5.4.2)
+    version: 5.5.0(prisma@5.5.0)
 
 devDependencies:
   '@types/node':
     specifier: 20.8.8
     version: 20.8.8
   prisma:
-    specifier: 5.4.2
-    version: 5.4.2
+    specifier: 5.5.0
+    version: 5.5.0
 
 packages:
 
-  /@prisma/client@5.5.0(prisma@5.4.2):
+  /@prisma/client@5.5.0(prisma@5.5.0):
     resolution: {integrity: sha512-JiCj/h79PRawWiBVa4Ng4tBaKMrfJgUwuRrZi4NuQRd58gWIP4kEYMqIidpUrab3dU2NM617pWRG2avX+dh+Sg==}
     engines: {node: '>=16.13'}
     requiresBuild: true
@@ -30,15 +30,15 @@ packages:
         optional: true
     dependencies:
       '@prisma/engines-version': 5.5.0-19.475c616176945d72f4330c92801f0c5e6398dc0f
-      prisma: 5.4.2
+      prisma: 5.5.0
     dev: false
 
   /@prisma/engines-version@5.5.0-19.475c616176945d72f4330c92801f0c5e6398dc0f:
     resolution: {integrity: sha512-/1orOUq7I54ISYBJockYB15FmF/VkCBeFzYYkWyLtBl2tLlJWHmA3NEUBM+wSmXGLK78BmuSNHrLbf8bmXkukQ==}
     dev: false
 
-  /@prisma/engines@5.4.2:
-    resolution: {integrity: sha512-fqeucJ3LH0e1eyFdT0zRx+oETLancu5+n4lhiYECyEz6H2RDskPJHJYHkVc0LhkU4Uv7fuEnppKU3nVKNzMh8g==}
+  /@prisma/engines@5.5.0:
+    resolution: {integrity: sha512-WX+8l4sJuWeS3A/5WqJpdBHp32UzUticiKwUWbFggcd6/sqGtCiiaFmXYmNw6Au2O6hjSX37Y07Vu2ZhP9cmWg==}
     requiresBuild: true
 
   /@types/node@20.8.8:
@@ -47,13 +47,13 @@ packages:
       undici-types: 5.25.3
     dev: true
 
-  /prisma@5.4.2:
-    resolution: {integrity: sha512-GDMZwZy7mysB2oXU+angQqJ90iaPFdD0rHaZNkn+dio5NRkGLmMqmXs31//tg/qXT3iB0cTQwnGGQNuirhSTZg==}
+  /prisma@5.5.0:
+    resolution: {integrity: sha512-QyMMh1WQiGU07Iz3Q8jd6y5KlomGLDVb4etkMWpQ4EmDAaY+zGgNHmBk2MfRPb0A+un1Ior1nZWZorfnKD6E5A==}
     engines: {node: '>=16.13'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@prisma/engines': 5.4.2
+      '@prisma/engines': 5.5.0
 
   /undici-types@5.25.3:
     resolution: {integrity: sha512-Ga1jfYwRn7+cP9v8auvEXN1rX3sWqlayd4HP7OKk4mZWylEmu3KzXDUGrQUN6Ol7qo1gPvB2e5gX6udnyEPgdA==}
