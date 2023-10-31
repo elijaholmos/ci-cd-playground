@@ -53,8 +53,7 @@ jobs:
         runs-on: ubuntu-latest
         needs: [detect-changed-apps]
         if: |
-            always() && !failure() && !cancelled() &&
-            contains(needs.detect-changed-apps.outputs.changes, 'apple')
+            always() && !failure() && !cancelled()
         steps:
             - name: Event name
               run: |
