@@ -18,7 +18,7 @@ jobs:
     detect-changed-apps:
         name: Detect changed apps
         runs-on: ubuntu-latest
-        if: inputs.deploy_all_apps == 'false'
+        if: inputs.deploy_all_apps != 'true'
         outputs:
             changes: ${{ steps.detect-changed-apps.outputs.changes }}
         steps:
@@ -33,7 +33,6 @@ jobs:
         needs: [detect-changed-apps]
         if: |
             always() && !failure() && !cancelled() &&
-            inputs.deploy_all_apps == 'true' ||
             contains(needs.detect-changed-apps.outputs.changes, 'actions')
         steps:
             - run: echo "Test 1"
