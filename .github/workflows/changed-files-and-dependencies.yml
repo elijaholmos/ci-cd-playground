@@ -24,6 +24,9 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v3
+            - name: Output input
+              run: |
+                  echo "deploy_all_apps: ${{ inputs.deploy_all_apps }}"
             - id: detect-changed-apps
               uses: ./.github/actions/detect-changed-apps
 
