@@ -7,11 +7,17 @@ permissions:
 on:
     workflow_call:
         inputs:
-            deploy_all_apps:
-                required: false
+            workflow_call:
+                # https://github.com/actions/runner/discussions/1884
+                description: 'To distinguish workflow_call from other events'
                 type: boolean
+                required: false
                 default: true
+            deploy_all_apps:
                 description: 'If false, only deploy apps/packages with detected changes'
+                type: boolean
+                required: false
+                default: true
 
 # Inputs aren't working because I'm running from a PR
 
@@ -19,7 +25,7 @@ jobs:
     detect-changed-apps:
         name: Detect changed apps
         runs-on: ubuntu-latest
-        # if: inputs.deploy_all_apps != false
+        if: inputs.deploy_all_apps != true
         outputs:
             changes: ${{ steps.detect-changed-apps.outputs.changes }}
         steps:
