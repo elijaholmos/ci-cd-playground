@@ -1,0 +1,36 @@
+name: Detect Changed Apps
+description: Searchs the project directories to determine which apps were changed
+
+# inputs:
+#     use_tag:
+#         description: 'If changes should be compared between the last tag'
+#         required: false
+#         default: 'false'
+
+outputs:
+    changes:
+        description: 'An array of all changes with app names'
+        value: ${{ steps.changes.outputs.changes }}
+
+runs:
+    using: composite
+    steps:
+        - name: Getting tag for last release
+          if: startsWith(github.ref, 'refs/tags/')
+          id: last-tag
+          shell: bash
+          run: |
+              last_tag=$(git tag --sort=creatordate | tail -2 | sed -n '1p')
+              echo "tag=$last_tag" >> "$GITHUB_OUTPUT"
+
+        - uses: dorny/paths-filter@v2
+          id: changes
+          with:
+              base: ${{ startsWith(github.ref, 'refs/tags/') && steps.last-tag.outputs.tag || github.ref }}
+              filters: |
+                  actions:
+                    - '.github/actions/**'
+                  workflows:
+                    - '.github/workflows/**'
+                  src:
+                    - 'src/**'

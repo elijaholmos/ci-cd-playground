@@ -1,0 +1,18 @@
+name: Call Changed Files and Depdendencies
+
+permissions:
+    id-token: write
+    contents: read
+
+on:
+    pull_request:
+    push:
+        tags:
+            - '*'
+
+jobs:
+    call-changed-files-and-dependencies:
+        name: Call Changed Files and Depdendencies
+        uses: ./.github/workflows/changed-files-and-dependencies.yml
+        with:
+            deploy_all_apps: false

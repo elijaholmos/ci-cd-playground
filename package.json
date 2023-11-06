@@ -1,15 +1,16 @@
 {
   "name": "test",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
-  "packageManager": "pnpm@8.6.10",
+  "packageManager": "pnpm@8.10.2",
   "dependencies": {
-    "@prisma/client": "5.0.0"
+    "@prisma/client": "5.5.2"
   },
   "devDependencies": {
-    "prisma": "5.0.0"
+    "@types/node": "20.8.10",
+    "prisma": "5.5.2"
   }
 }

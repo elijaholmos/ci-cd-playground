@@ -1,0 +1,12 @@
+name: Pull Request Validation
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  parent:
+    uses: 'elijaholmos/.github/.github/workflows/pull-request-title.yml@main'
