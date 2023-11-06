@@ -1,0 +1,79 @@
+name: Changed Files and Depdendencies
+
+permissions:
+    id-token: write
+    contents: read
+
+on:
+    workflow_call:
+        inputs:
+            workflow_call:
+                # https://github.com/actions/runner/discussions/1884
+                description: 'To distinguish workflow_call from other events'
+                type: boolean
+                required: false
+                default: true
+            deploy_all_apps:
+                description: 'If false, only deploy apps/packages with detected changes'
+                type: boolean
+                required: false
+                default: true
+
+jobs:
+    detect-changed-apps:
+        name: Detect changed apps
+        runs-on: ubuntu-latest
+        if: inputs.deploy_all_apps != true
+        outputs:
+            changes: ${{ steps.detect-changed-apps.outputs.changes }}
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
+            - name: Output input
+              run: |
+                  echo "deploy_all_apps: ${{ inputs.deploy_all_apps }}"
+            - id: detect-changed-apps
+              uses: ./.github/actions/detect-changed-apps
+
+    test-1:
+        name: Test 1
+        runs-on: ubuntu-latest
+        needs: [detect-changed-apps]
+        if: |
+            (always() && !failure() && !cancelled()) &&
+            (inputs.deploy_all_apps == true ||
+            (
+                contains(needs.detect-changed-apps.outputs.changes, 'actions')
+            ))
+        steps:
+            - name: Event name
+              run: |
+                  echo "Event name: ${{ github.event_name }}"
+            - name: Is cancelled
+              if: cancelled()
+              run: echo "cancelled() == true"
+            - name: Is success()
+              if: success()
+              run: echo "success() == true"
+            - name: Is failure()
+              if: failure()
+              run: echo "failure() == true"
+
+    test-2:
+        name: Test 2
+        runs-on: ubuntu-latest
+        needs: [detect-changed-apps]
+        if: always() && !failure() && !cancelled()
+        steps:
+            - name: Event name
+              run: |
+                  echo "Event name: ${{ github.event_name }}"
+            - name: Is cancelled
+              if: cancelled()
+              run: echo "cancelled() == true"
+            - name: Is success()
+              if: success()
+              run: echo "success() == true"
+            - name: Is failure()
+              if: failure()
+              run: echo "failure() == true"
