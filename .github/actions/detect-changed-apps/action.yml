@@ -30,7 +30,7 @@ runs:
               base: ${{ startsWith(github.ref, 'refs/tags/') && steps.last-tag.outputs.tag || github.ref }}
               filters: |
                   actions:
-                    - '.github/**/*detect*'
+                    - '.github/**/*action*'
                   workflows:
                     - '.github/workflows/**'
                   src:
