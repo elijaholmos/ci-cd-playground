@@ -9,9 +9,7 @@ on:
 
 jobs:
     call-changed-files-and-dependencies:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Call Changed Files and Depdendencies
-              uses: ./.github/workflows/changed-files-and-dependencies.yml
-              with:
-                  deploy_all_apps: false
+        name: Call Changed Files and Depdendencies
+        uses: ./.github/workflows/changed-files-and-dependencies.yml
+        with:
+            deploy_all_apps: false
