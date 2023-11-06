@@ -12,13 +12,14 @@ on:
                 type: boolean
                 default: true
                 description: 'If false, only deploy apps/packages with detected changes'
-    pull_request:
+
+# Inputs aren't working because I'm running from a PR
 
 jobs:
     detect-changed-apps:
         name: Detect changed apps
         runs-on: ubuntu-latest
-        if: inputs.deploy_all_apps == false
+        if: inputs.deploy_all_apps != false
         outputs:
             changes: ${{ steps.detect-changed-apps.outputs.changes }}
         steps:
