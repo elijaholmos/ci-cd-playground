@@ -6,6 +6,9 @@ permissions:
 
 on:
     pull_request:
+    push:
+        tags:
+            - '*'
 
 jobs:
     call-changed-files-and-dependencies:

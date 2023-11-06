@@ -19,8 +19,6 @@ on:
                 required: false
                 default: true
 
-# Inputs aren't working because I'm running from a PR
-
 jobs:
     detect-changed-apps:
         name: Detect changed apps
