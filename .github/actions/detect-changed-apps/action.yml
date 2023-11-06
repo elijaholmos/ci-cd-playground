@@ -21,6 +21,7 @@ runs:
           shell: bash
           run: |
               last_tag=$(git tag --sort=creatordate | tail -2 | sed -n '1p')
+              echo "Last tag: $last_tag"
               echo "tag=$last_tag" >> "$GITHUB_OUTPUT"
 
         - uses: dorny/paths-filter@v2
