@@ -32,6 +32,7 @@ jobs:
             - name: Output input
               run: |
                   echo "deploy_all_apps: ${{ inputs.deploy_all_apps }}"
+                  echo "${{ github.ref }}"
             - id: detect-changed-apps
               uses: ./.github/actions/detect-changed-apps
 
