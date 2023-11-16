@@ -24,7 +24,7 @@ runs:
               echo "Last tag: $last_tag"
               echo "tag=$last_tag" >> "$GITHUB_OUTPUT"
 
-        - uses: dorny/paths-filter@v2
+        - uses: AurorNZ/paths-filter@v3
           id: changes
           with:
               base: ${{ startsWith(github.ref, 'refs/tags/') && steps.last-tag.outputs.tag || github.ref }}
