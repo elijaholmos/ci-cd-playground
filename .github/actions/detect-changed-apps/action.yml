@@ -31,6 +31,7 @@ runs:
               filters: |
                   actions:
                     - '.github/**/*action*'
+                    - '!.github/actions/detect-changed-apps/**'
                   workflows:
                     - '.github/workflows/**'
                   src:
