@@ -11,8 +11,8 @@ dependencies:
 
 devDependencies:
   '@types/node':
-    specifier: 20.9.4
-    version: 20.9.4
+    specifier: 20.9.5
+    version: 20.9.5
   prisma:
     specifier: 5.6.0
     version: 5.6.0
@@ -41,8 +41,8 @@ packages:
     resolution: {integrity: sha512-Mt2q+GNJpU2vFn6kif24oRSBQv1KOkYaterQsi0k2/lA+dLvhRX6Lm26gon6PYHwUM8/h8KRgXIUMU0PCLB6bw==}
     requiresBuild: true
 
-  /@types/node@20.9.4:
-    resolution: {integrity: sha512-wmyg8HUhcn6ACjsn8oKYjkN/zUzQeNtMy44weTJSM6p4MMzEOuKbA3OjJ267uPCOW7Xex9dyrNTful8XTQYoDA==}
+  /@types/node@20.9.5:
+    resolution: {integrity: sha512-Uq2xbNq0chGg+/WQEU0LJTSs/1nKxz6u1iemLcGomkSnKokbW1fbLqc3HOqCf2JP7KjlL4QkS7oZZTrOQHQYgQ==}
     dependencies:
       undici-types: 5.26.5
     dev: true
