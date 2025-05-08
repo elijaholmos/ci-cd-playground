@@ -13,8 +13,8 @@ importers:
         version: 6.7.0(prisma@6.7.0)
     devDependencies:
       '@types/node':
-        specifier: 22.15.15
-        version: 22.15.15
+        specifier: 22.15.17
+        version: 22.15.17
       prisma:
         specifier: 6.7.0
         version: 6.7.0
@@ -201,8 +201,8 @@ packages:
   '@prisma/get-platform@6.7.0':
     resolution: {integrity: sha512-i9IH5lO4fQwnMLvQLYNdgVh9TK3PuWBfQd7QLk/YurnAIg+VeADcZDbmhAi4XBBDD+hDif9hrKyASu0hbjwabw==}
 
-  '@types/node@22.15.15':
-    resolution: {integrity: sha512-R5muMcZob3/Jjchn5LcO8jdKwSCbzqmPB6ruBxMcf9kbxtniZHP327s6C37iOfuw8mbKK3cAQa7sEl7afLrQ8A==}
+  '@types/node@22.15.17':
+    resolution: {integrity: sha512-wIX2aSZL5FE+MR0JlvF87BNVrtFWf6AE6rxSE9X7OwnVvoyCQjpzSRJ+M87se/4QCkCiebQAqrJ0y6fwIyi7nw==}
 
   debug@4.4.0:
     resolution: {integrity: sha512-6WTZ/IxCY/T6BALoZHaE4ctp9xm+Z5kY/pzYaCHRFeyVhojxlrm+46y68HA6hr0TcwEssoxNiDEUJQjfPZ/RYA==}
@@ -353,7 +353,7 @@ snapshots:
     dependencies:
       '@prisma/debug': 6.7.0
 
-  '@types/node@22.15.15':
+  '@types/node@22.15.17':
     dependencies:
       undici-types: 6.21.0
 
