@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "packageManager": "pnpm@10.11.0",
   "dependencies": {
-    "@prisma/client": "6.7.0"
+    "@prisma/client": "6.8.1"
   },
   "devDependencies": {
     "@types/node": "22.15.18",
