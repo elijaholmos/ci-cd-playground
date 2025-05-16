@@ -11,6 +11,6 @@
   },
   "devDependencies": {
     "@types/node": "22.15.18",
-    "prisma": "6.7.0"
+    "prisma": "6.8.1"
   }
 }
