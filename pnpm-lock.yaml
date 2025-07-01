@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@prisma/client':
-        specifier: 6.10.1
-        version: 6.10.1(prisma@6.10.1)
+        specifier: 6.11.0
+        version: 6.11.0(prisma@6.10.1)
     devDependencies:
       '@types/node':
         specifier: 22.15.34
@@ -21,8 +21,8 @@ importers:
 
 packages:
 
-  '@prisma/client@6.10.1':
-    resolution: {integrity: sha512-Re4pMlcUsQsUTAYMK7EJ4Bw2kg3WfZAAlr8GjORJaK4VOP6LxRQUQ1TuLnxcF42XqGkWQ36q5CQF1yVadANQ6w==}
+  '@prisma/client@6.11.0':
+    resolution: {integrity: sha512-K9TkKepOYvCOg3qCuKz7ZHf6rf58BFKi08plKjU4qVv9y7/UxO6tLz7PlWcgODUZKURLPmRHjHERffIx/8az4w==}
     engines: {node: '>=18.18'}
     peerDependencies:
       prisma: '*'
@@ -73,7 +73,7 @@ packages:
 
 snapshots:
 
-  '@prisma/client@6.10.1(prisma@6.10.1)':
+  '@prisma/client@6.11.0(prisma@6.10.1)':
     optionalDependencies:
       prisma: 6.10.1
 
