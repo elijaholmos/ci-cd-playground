@@ -13,8 +13,8 @@ importers:
         version: 7.2.0(prisma@7.2.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
     devDependencies:
       '@types/node':
-        specifier: 24.10.7
-        version: 24.10.7
+        specifier: 24.10.8
+        version: 24.10.8
       prisma:
         specifier: 7.2.0
         version: 7.2.0(@types/react@19.2.8)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -112,8 +112,8 @@ packages:
   '@standard-schema/spec@1.1.0':
     resolution: {integrity: sha512-l2aFy5jALhniG5HgqrD6jXLi/rUWrKvqN/qJx6yoJsgKhblVd+iqqU4RCXavm/jPityDo5TCvKMnpjKnOriy0w==}
 
-  '@types/node@24.10.7':
-    resolution: {integrity: sha512-+054pVMzVTmRQV8BhpGv3UyfZ2Llgl8rdpDTon+cUH9+na0ncBVXj3wTUKh14+Kiz18ziM3b4ikpP5/Pc0rQEQ==}
+  '@types/node@24.10.8':
+    resolution: {integrity: sha512-r0bBaXu5Swb05doFYO2kTWHMovJnNVbCsII0fhesM8bNRlLhXIuckley4a2DaD+vOdmm5G+zGkQZAPZsF80+YQ==}
 
   '@types/react@19.2.8':
     resolution: {integrity: sha512-3MbSL37jEchWZz2p2mjntRZtPt837ij10ApxKfgmXCTuHWagYg7iA5bqPw6C8BMPfwidlvfPI/fxOc42HLhcyg==}
@@ -492,7 +492,7 @@ snapshots:
 
   '@standard-schema/spec@1.1.0': {}
 
-  '@types/node@24.10.7':
+  '@types/node@24.10.8':
     dependencies:
       undici-types: 7.16.0
 
