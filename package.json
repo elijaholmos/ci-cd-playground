@@ -5,7 +5,7 @@
   "author": "",
   "private": true,
   "license": "UNLICENSED",
-  "packageManager": "pnpm@11.1.0",
+  "packageManager": "pnpm@11.1.1",
   "dependencies": {
     "@prisma/client": "7.8.0"
   },
