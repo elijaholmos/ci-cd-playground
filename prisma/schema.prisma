@@ -1,0 +1,77 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mongodb"
+    url      = env("DATABASE_URL")
+}
+
+model Student {
+    id                 Int                @id @map("_id")
+    cardId             String             @unique
+    first              String
+    last               String
+    walletAddress      String             @unique
+    courseIds          String[]           @db.ObjectId
+    courses            Course[]           @relation(fields: [courseIds], references: [id], name: "students")
+    honorsCourseIds    String[]           @db.ObjectId
+    honorsCourses      Course[]           @relation(fields: [honorsCourseIds], references: [id], name: "honorsStudents")
+    attendanceRecords  AttendanceRecord[]
+    attendanceQueueIds String[]           @db.ObjectId
+    attendanceQueues   AttendanceQueue[]  @relation(fields: [attendanceQueueIds], references: [id])
+}
+
+model Professor {
+    id                String             @id @default(auto()) @map("_id") @db.ObjectId
+    first             String
+    last              String
+    walletAddress     String             @unique
+    nonce             String
+    courses           Course[]
+    attendanceRecords AttendanceRecord[]
+}
+
+model Course {
+    id                String             @id @default(auto()) @map("_id") @db.ObjectId
+    code              String
+    name              String
+    professorId       String             @db.ObjectId
+    professor         Professor          @relation(fields: [professorId], references: [id])
+    studentIds        Int[]
+    students          Student[]          @relation(fields: [studentIds], references: [id], name: "students")
+    honorsStudentIds  Int[]
+    honorsStudents    Student[]          @relation(fields: [honorsStudentIds], references: [id], name: "honorsStudents")
+    attendanceRecords AttendanceRecord[]
+    attendanceQueues  AttendanceQueue[]
+}
+
+modela AttendanceRecord {
+    id          String    @id @default(auto()) @map("_id") @db.ObjectId
+    studentId   Int
+    student     Student   @relation(fields: [studentId], references: [id])
+    professorId String    @db.ObjectId
+    professor   Professor @relation(fields: [professorId], references: [id])
+    courseId    String    @db.ObjectId
+    course      Course    @relation(fields: [courseId], references: [id])
+    timestamp   Int
+    imageURL    String
+}
+
+enum AttendanceQueueStatus {
+    ACTIVE
+    MINTING
+    COMPLETE
+    CLOSED
+    INVALID
+}
+
+model AttendanceQueue {
+    id         String                @id @default(auto()) @map("_id") @db.ObjectId
+    status     AttendanceQueueStatus
+    studentIds Int[]
+    students   Student[]             @relation(fields: [studentIds], references: [id])
+    courseId   String                @db.ObjectId
+    course     Course                @relation(fields: [courseId], references: [id])
+    timestamp  Int
+}
