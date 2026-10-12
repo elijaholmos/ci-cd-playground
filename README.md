@@ -1,3 +1,3 @@
 # ci-cd-playground
 
-Isolated testing of GitHub CI/CD actions
+Isolated testing of GitHub CI/CD actions.
