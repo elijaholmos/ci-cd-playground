@@ -187,14 +187,14 @@ importers:
     dependencies:
       '@prisma/client':
         specifier: 7.10.1
-        version: 7.10.1(prisma@7.10.1(@types/node@26.6.7)(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
+        version: 7.10.1(prisma@7.10.1(@types/node@26.6.11)(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))
     devDependencies:
       '@types/node':
-        specifier: 26.6.7
-        version: 26.6.7
+        specifier: 26.6.11
+        version: 26.6.11
       prisma:
         specifier: 7.10.1
-        version: 7.10.1(@types/node@26.6.7)(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+        version: 7.10.1(@types/node@26.6.11)(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
 
 packages:
 
@@ -385,8 +385,8 @@ packages:
   '@types/lodash@4.17.27':
     resolution: {integrity: sha512-VenMRv/eKNrspX9v3H4dbmjsrnCOYdYBG3kxXKk3dG6X+urBGcj2Prww3xw1U5K4FV/mE4h5GbWd0szEKf+9ew==}
 
-  '@types/node@26.6.7':
-    resolution: {integrity: sha512-tovuRfrUILu6v46bMG+BgXxMvsqPBx2WO2as8Rpln+JTff1dbexMtAM4KFTejmL0axsnSWViCW7MecUQpLuBRA==}
+  '@types/node@26.6.11':
+    resolution: {integrity: sha512-uUyQ2XLEz+EXh34lmS3GhKrkqn/8FU7KUiKRpk347At2bmnMVWss45yz8b4FG/tUtmV1tV/+TVkITItPROyeeQ==}
 
   '@types/react@19.3.0':
     resolution: {integrity: sha512-N0rFCuH9YoxG9/m61l9MfpJKfmLOVU0em7ipIz6TRgSSkvReLB9vL85GB+yr8Bs5leqpvg96JSwF4ZS1s4viQg==}
@@ -772,11 +772,11 @@ snapshots:
 
   '@prisma/client-runtime-utils@7.10.1': {}
 
-  '@prisma/client@7.10.1(prisma@7.10.1(@types/node@26.6.7)(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))':
+  '@prisma/client@7.10.1(prisma@7.10.1(@types/node@26.6.11)(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1))':
     dependencies:
       '@prisma/client-runtime-utils': 7.10.1
     optionalDependencies:
-      prisma: 7.10.1(@types/node@26.6.7)(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
+      prisma: 7.10.1(@types/node@26.6.11)(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
 
   '@prisma/config@7.10.1':
     dependencies:
@@ -952,7 +952,7 @@ snapshots:
 
   '@types/lodash@4.17.27': {}
 
-  '@types/node@26.6.7':
+  '@types/node@26.6.11':
     dependencies:
       undici-types: 8.9.0
 
@@ -1213,9 +1213,9 @@ snapshots:
 
   lru.min@1.1.5: {}
 
-  mysql2@3.24.4(@types/node@26.6.7):
+  mysql2@3.24.4(@types/node@26.6.11):
     dependencies:
-      '@types/node': 26.6.7
+      '@types/node': 26.6.11
       aws-ssl-profiles: 1.1.2
       generate-function: 2.3.1
       iconv-lite: 0.7.3
@@ -1244,13 +1244,13 @@ snapshots:
 
   postgres@3.4.7: {}
 
-  prisma@7.10.1(@types/node@26.6.7)(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
+  prisma@7.10.1(@types/node@26.6.11)(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1):
     dependencies:
       '@prisma/config': 7.10.1
       '@prisma/dev': 0.24.17
       '@prisma/engines': 7.10.1
       '@prisma/studio-core': 0.33.0(@types/react@19.3.0)(react-dom@19.3.1(react@19.3.1))(react@19.3.1)
-      mysql2: 3.24.4(@types/node@26.6.7)
+      mysql2: 3.24.4(@types/node@26.6.11)
       postgres: 3.4.7
     transitivePeerDependencies:
       - '@types/node'
